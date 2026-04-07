@@ -1,1 +1,37 @@
+package eshdg;
+import java.util.*;
 
+public class Main11 {
+	public static void main(String[] args) {
+		Teacher t1 = new Teacher("jeeva", 123, "Maths");
+		Teacher t2 = new Teacher("bhavin", 456, "Physics");
+		Teacher t3 = new Teacher("saran", 789, "Chemistry");
+
+		System.out.println(t1);
+		System.out.println(t2);
+		System.out.println(t3);
+
+		ArrayList<Teacher> list = new ArrayList<>();
+		list.add(t1);
+		list.add(t2);
+		list.add(t3);
+
+		System.out.println(list);
+	}
+}
+
+class Teacher {
+	String name;
+	int id;
+	String subject;
+
+	Teacher(String name, int id, String subject) {
+		this.name = name;
+		this.id = id;
+		this.subject = subject;
+	}
+
+	public String toString() {
+		return name + " " + id + " " + subject;
+	}
+}
